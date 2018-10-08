@@ -1,10 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>@lloLivrezMoi365</ion-title>
   </ion-toolbar>
 </ion-header>
  
 <ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">nom utilisateur</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">mot de passe</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-list>
   <ion-button (click)="login()" expand="block">Login</ion-button>
   <ion-button expand="block" color="secondary" href="/register" routerDirection="forward">Register</ion-button>
 </ion-content>

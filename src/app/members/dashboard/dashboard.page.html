@@ -5,10 +5,52 @@
         <ion-icon slot="icon-only" name="log-out"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>My Dashboard</ion-title>
+    <ion-title>Bienvenu Livreur</ion-title>
   </ion-toolbar>
 </ion-header>
  
-<ion-content padding>
+<ion-content >
+    <ion-card *ngFor="let article of data?.articles">
+      <ion-item>
+        <ion-icon name="contact" slot="start"></ion-icon>
+        <ion-title>{{article.title}}</ion-title>
+        <ion-button fill="outline" slot="end"><ion-icon name="print"></ion-icon></ion-button>
+      </ion-item>
+    
+      <ion-card-content>
+        <ion-item class="activated">
+          <ion-icon name="pizza" slot="start"></ion-icon>
+          <ion-label>{{article.description}}</ion-label>
+        </ion-item>
+      
+        <ion-item>
+          <ion-icon name="card" slot="start"></ion-icon>
+          <ion-label>{{article.publishedAt}}</ion-label>
+        </ion-item>
+      
+        <ion-item class="activated">
+          <ion-icon name="call" slot="start"></ion-icon>
+          <ion-label>telephone du clients</ion-label>
+        </ion-item>
+      
+        <ion-item>
+          <ion-icon name="pin" slot="start"></ion-icon>
+          <ion-label>adress clients</ion-label>
+        </ion-item>
+        <ion-item class="activated">
+          <ion-icon name="time" slot="start"></ion-icon>
+          <ion-label>heurs de la commande</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="timer" slot="start"></ion-icon>
+          <ion-label>heurs de livraison</ion-label>
+        </ion-item>
+        <ion-item class="activated">
+          <ion-icon name="pricetag" slot="start"></ion-icon>
+          <ion-label>prendre la commande</ion-label>
+          <ion-toggle checked="false"></ion-toggle>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
  
 </ion-content>

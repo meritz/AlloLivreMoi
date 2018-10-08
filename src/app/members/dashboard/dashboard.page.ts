@@ -1,5 +1,7 @@
 import { AuthenticationService } from './../../services/authentication.service';
+import { CommandeService } from '../../services/commande.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -8,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardPage implements OnInit {
 
-  constructor(private authService: AuthenticationService) { }
+  data: any;
+  page: 0;
+
+  constructor(private authService: AuthenticationService, private commandeService: CommandeService,) { }
 
   ngOnInit() {
+    this.commandeService.getData(`liste_commande`)
+    .subscribe(data => {
+      console.log(data);
+      this.data = data;
+    });
   }
 
   logout() {
