@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardPage implements OnInit {
 
-  data: any;
+  articles: any;
   page: 0;
 
   constructor(private authService: AuthenticationService, private commandeService: CommandeService,) { }
@@ -19,7 +19,7 @@ export class DashboardPage implements OnInit {
     this.commandeService.getData(`liste_commande`)
     .subscribe(data => {
       console.log(data);
-      this.data = data;
+      this.articles = data;
     });
   }
 
