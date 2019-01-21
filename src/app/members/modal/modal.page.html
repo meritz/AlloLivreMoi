@@ -42,8 +42,9 @@
 
     </ion-card-content>
   </ion-card>
-  <ion-button>selecion imrpimante</ion-button>
-  <ion-button>imrpimante</ion-button>
+  <ion-item>{{selectedPrinter.name}}</ion-item>
+  <ion-button ion-item (tap)="listBTDevice()">selecion imrpimante</ion-button>
+  <ion-button ion-item (tap)="testPrinter()">imrpimante</ion-button>
    
 </ion-content>
 

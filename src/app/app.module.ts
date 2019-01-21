@@ -6,6 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { ModalPageModule } from './members/modal/modal.module';
+import { PrinterListModalPageModule } from './members/printer-list-modal/printer-list-modal.module';
 
 
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
      IonicStorageModule.forRoot(),
      HttpClientModule,
      ModalPageModule,
+     PrinterListModalPageModule,
     ],
   providers: [
     StatusBar,
